@@ -15,7 +15,7 @@
         $characterName = "Mike";
         echo "He really liked the name $characterName <br>";
         echo "But didn't like being $characterAge <br>";   
-        echo "<h1>$characterName</h1>";
+        echo "<h1>$characterName is not $characterAge yet</h1>";
         echo "<h1>$characterAge</h1>";
     ?>
 </body> <h1></h1>
