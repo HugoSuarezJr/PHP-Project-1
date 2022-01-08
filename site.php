@@ -8,15 +8,11 @@
 </head>
 <body>
     <?php
-        $characterName = "Tom";
-        $characterAge = 80;
-        echo "There once was a man named $characterName <br>";
-        echo "He was $characterAge years old <br>";
-        $characterName = "Mike";
-        echo "He really liked the name $characterName <br>";
-        echo "But didn't like being $characterAge <br>";   
-        echo "<h1>$characterName is not $characterAge yet</h1>";
-        echo "<h1>$characterAge</h1>";
+        $phrase = "To be or not to be";
+        $age = 30;
+        $gpa = 30.3;
+        $isMale = true;
+        echo $phrase;
     ?>
 </body> <h1></h1>
 </html>
