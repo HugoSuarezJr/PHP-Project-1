@@ -8,15 +8,24 @@
 </head>
 <body>
     <form action="site.php" method= "get">
-        <input type="number" name="num1">
-        <br>
-        Plus (+)
-        <br>
-        <input type="number" name="num2">
+        Color: <input type="text" name="color"> <br>
+        Plural Noun: <input type="text" name="pluralNoun"> <br>
+        Celebrity: <input type="text" name="celebrity"> <br>
+
         <input type="submit">
     </form>
 
-   Answer: <?php echo $_GET["num1"] + $_GET["num2"] ?>
+    <br>
+
+    <?php
+        $color = $_GET["color"];
+        $pluralNoun = $_GET["pluralNoun"];
+        $celebrity = $_GET["celebrity"];
+
+        echo "Roses are $color <br>";
+        echo "$pluralNoun are blue <br>";
+        echo "I love $celebrity <br>";
+    ?>
     
 </body>
 </html>
