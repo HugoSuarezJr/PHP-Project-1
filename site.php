@@ -8,10 +8,7 @@
 </head>
 <body>
     <?php
-        $phrase = "Elephant Academy";
-        
-        echo substr($phrase, 9, 3);
-
+        echo max(2,10)
     ?>
 </body> <h1></h1>
 </html>
