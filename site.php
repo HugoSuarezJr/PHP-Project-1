@@ -8,15 +8,19 @@
 </head>
 <body>
 
-<form action="site.php" method="post" >
+<!-- <form action="site.php" method="post" >
     <input type="text" name="student" >
     <input type="submit">
-</form>
+</form> -->
 
     <?php
-      $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
-      $grades["Jim"] = "F";
-      echo $grades[$_POST["student"]];
+        function sayHi($name, $age){
+            echo "Hello $name, you are $age<br>";
+        }
+
+        sayHi("Hugo", 70);
+        sayHi("Mike", 88);
+        sayHi("Johnny", 12);
     ?>
     
     
