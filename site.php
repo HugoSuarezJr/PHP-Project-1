@@ -7,8 +7,8 @@
     <title>PHP course</title>
 </head>
 <body>
-    <form action="site.php" method= "get">
-        Name: <input type="text" name="name"> <br>
+    <form action="site.php" method= "post">
+        Password: <input type="password" name="password"> <br>
 
         <input type="submit">
     </form>
@@ -16,8 +16,7 @@
     <br>
 
     <?php
-        echo $_GET["name"];
-        echo $_GET["age"];
+        echo $_POST["password"];
     ?>
     
 </body>
