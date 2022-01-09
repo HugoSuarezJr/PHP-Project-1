@@ -8,10 +8,7 @@
 </head>
 <body>
     <form action="site.php" method= "get">
-        Color: <input type="text" name="color"> <br>
-        Plural Noun: <input type="text" name="pluralNoun"> <br>
-        Celebrity: <input type="text" name="celebrity"> <br>
-        Planet: <input type="text" name="planet"> <br>
+        Name: <input type="text" name="name"> <br>
 
         <input type="submit">
     </form>
@@ -19,16 +16,8 @@
     <br>
 
     <?php
-        $color = $_GET["color"];
-        $pluralNoun = $_GET["pluralNoun"];
-        $celebrity = $_GET["celebrity"];
-        $planet = $_GET["planet"];
-
-
-        echo "Roses are $color <br>";
-        echo "$pluralNoun are blue <br>";
-        echo "I love $celebrity <br>";
-        echo "Lets go to $planet !";
+        echo $_GET["name"];
+        echo $_GET["age"];
     ?>
     
 </body>
