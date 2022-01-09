@@ -8,11 +8,18 @@
 </head>
 <body>
 
+<form action="site.php" method="post" >
+   Apples: <input type="checkbox" name="fruits[]" value="apples" > <br>
+   Oranges <input type="checkbox" name="fruits[]" value="oranges" > <br>
+   Bananas <input type="checkbox" name="fruits[]" value="bananas" > <br>
+    <input type="submit">
+</form>
+
     <?php
-       $friends = array("Kevin", "Karen", "Oscar", "Jim");
-    //    $friends[1] = "Dwight";
-       echo count($friends);
+      $fruits = $_POST["fruits"];
+      echo $fruits[0];
     ?>
     
+    
 </body>
-</html>
+</html> 
