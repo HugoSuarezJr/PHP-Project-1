@@ -14,14 +14,17 @@
 </form> -->
 
     <?php
-        function cube($num){
-            echo "Hello";
-            return $num * $num * $num;
-            
+        $isMale = false;
+        $isTall = true;
+        if ($isMale && $isTall){
+            echo "You are a tall male"; 
+        } elseif ($isTall && !$isMale) {
+            echo "You are a tall woman!";
+        } elseif ($isMale) {
+            echo "You are a short male";
+        } else {
+            echo "You are a short woman";
         }
-
-        
-        echo cube(4);
     ?>
     
     
