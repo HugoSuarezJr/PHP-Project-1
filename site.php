@@ -15,12 +15,12 @@
 
 
      <?php
-            $index = 6;
+            $luckyNumbers = array(4, 8, 14, 16, 23, 42);
 
-            do{
-                echo "$index <br>";
-                $index++;
-            }while($index <= 5);
+            for ($i = 0; $i < count($luckyNumbers); $i++){
+                echo "$luckyNumbers[$i] <br>";
+            }
+
     ?> 
     
     
