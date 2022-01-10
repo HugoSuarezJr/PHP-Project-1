@@ -11,11 +11,13 @@
 
 
 
-     <?php include "header.html" ?> 
+     <?php 
+        include "useful-tools.php";
+        echo $feetInMile;
+        echo "<br>";
+        sayHi("Hugo");
 
-     <p>Hello World<p>
-
-     <?php include "footer.html" ?>
+     ?> 
     
     
 </body>
