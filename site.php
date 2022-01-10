@@ -8,20 +8,14 @@
 </head>
 <body>
 
-<!-- <form action="site.php" method="post" >
-    What was your grade? <br> <input type="text" name="grade" > <br>
-    <input type="submit"> -->
-</form>
 
 
-     <?php
-            $luckyNumbers = array(4, 8, 14, 16, 23, 42);
 
-            for ($i = 0; $i < count($luckyNumbers); $i++){
-                echo "$luckyNumbers[$i] <br>";
-            }
+     <?php include "header.html" ?> 
 
-    ?> 
+     <p>Hello World<p>
+
+     <?php include "footer.html" ?>
     
     
 </body>
