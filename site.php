@@ -29,6 +29,9 @@
         $book2-> author = "Tolkien";
         $book2-> pages = 700;
 
+
+        echo $book2-> title
+
      ?> 
     
     
