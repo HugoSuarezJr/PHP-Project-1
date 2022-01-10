@@ -8,40 +8,46 @@
 </head>
 <body>
 
-<!-- <form action="site.php" method="post" >
-    First Number: <input type="number" step="0.0001" name="num1" > <br>
-    OP: <input type="text" name="op"><br>
-    Second Number: <input type="number" step="0.0001" name="num2" > <br>
+<form action="site.php" method="post" >
+    What was your grade? <br> <input type="text" name="grade" > <br>
     <input type="submit">
 </form>
--->
+
 
      <?php
-        // $num1 = $_POST["num1"];
-        // $num2 = $_POST["num2"];
-        // $op = $_POST["op"];
+       
+        $grade = $_POST["grade"];
 
-        // if($op == "+"){
-        //     echo $num1 + $num2;
-        // } elseif($op == "*"){
-        //     echo $num1 * $num2;
-        // } elseif($op == "/"){
-        //     echo $num1 / $num2;
-        // } elseif($op == "-"){
-        //     echo $num1 - $num2;
-        // } else {
-        //   echo  "Invalid Operator";
-        // }
+        switch($grade){
+            case "A" : 
+                echo "You did amazing";
+                break;
+            case "B":
+                echo "You did pretty good!";
+                break;
+            case "C": 
+                echo "You did ok";
+                break;
+            case "D":
+                echo "You did very bad";
+                break;
+            case "F":
+                echo "YOU FAIL!";
+                break;
+            default:
+                echo "Invalid Grade";
+        }
+
 
         
 
-        $territories = array(
-            "1 - Miami", "10 - Key West", "20c - West Palm Beach", "20b - West Palm Beach", "2 - Fort Lauderdale", "5 - Orlando"
-        );
-        sort($territories, SORT_NATURAL | SORT_FLAG_CASE);
-        foreach ($territories as $key => $val) {
-            echo " $val \n <br>";
-        }
+        // $territories = array(
+        //     "1 - Miami", "10 - Key West", "20c - West Palm Beach", "20b - West Palm Beach", "2 - Fort Lauderdale", "5 - Orlando"
+        // );
+        // sort($territories, SORT_NATURAL | SORT_FLAG_CASE);
+        // foreach ($territories as $key => $val) {
+        //     echo " $val \n <br>";
+        // }
 
 
         
