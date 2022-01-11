@@ -13,29 +13,35 @@
 
      <?php 
         
-        class Movie {
-            public $title;
-            private $rating;
-
-            function __construct($title, $rating){
-                $this ->title = $title;
-                $this->setRating($rating);
+        class Chef{
+            function makeChicken(){
+                echo "The chef makes chicken <br>";
             }
-            function getRating(){
-                return $this->rating;
+            function makeSalad(){
+                echo "The chef makes salad <br>";
             }
-            function setRating($rating){
-                if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
-                    $this->rating = $rating;
-                } else {
-                    $this->rating = "NR";
-                }
+            function makeSpecial(){
+                echo "The chef makes bbq ribs <br>";
             }
         }
 
-        $avengers = new Movie("Avengers", "DOG");
+        class ItalianChef extends Chef{
+            function makePasta(){
+                echo "Italian made pasta";
+            }
+            function makeSpecial(){
+                echo "Italian made lasagna";
+            }
 
-        echo $avengers->getRating();
+        }
+
+        $chef = new Chef();
+
+        $chef->makeSpecial();
+
+        $italianChef = new ItalianChef();
+
+        $italianChef->makeSpecial();
 
      ?> 
     
