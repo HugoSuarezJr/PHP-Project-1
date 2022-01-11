@@ -13,22 +13,29 @@
 
      <?php 
         
-        class Book {
-            var $title;
-            var $author;
-            var $pages; 
+        class Student {
+            var $name;
+            var $major;
+            var $gpa; 
 
-            function __construct($aTitle, $aAuthor, $aPages){
-                $this->title = $aTitle;
-                $this->author = $aAuthor;
-                $this->pages = $aPages;
+            function __construct($name, $major, $gpa){
+                $this->name = $name;
+                $this->major = $major;
+                $this->gpa = $gpa;
+            }
+
+            function hasHonors(){
+                if($this->gpa >= 3.5){
+                    return "true";
+                } 
+                    return "false";
             }
         }
 
-        $book3 = new Book("The Holy Scriptures", "Jehovah", 1661);
+        $student1 = new Student("Jim", "Business", 2.8);
+        $student2 = new Student("Pam", "Art", 3.6);
 
-        echo "<h1> $book3->author is the creator of all things and the Author of $book3->title 
-        which has a total of $book3->pages pages. </h1>"
+        echo $student2->hasHonors();
 
      ?> 
     
