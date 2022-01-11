@@ -16,21 +16,19 @@
         class Book {
             var $title;
             var $author;
-            var $pages;
+            var $pages; 
+
+            function __construct($aTitle, $aAuthor, $aPages){
+                $this->title = $aTitle;
+                $this->author = $aAuthor;
+                $this->pages = $aPages;
+            }
         }
- 
-        $book1 = new Book;
-        $book1-> title = "Harry Potter";
-        $book1-> author = "JK Rowling";
-        $book1-> pages = 400;
 
-        $book2 = new Book;
-        $book2-> title = "Lord of The Rings";
-        $book2-> author = "Tolkien";
-        $book2-> pages = 700;
+        $book3 = new Book("The Holy Scriptures", "Jehovah", 1661);
 
-
-        echo $book2-> title
+        echo "<h1> $book3->author is the creator of all things and the Author of $book3->title 
+        which has a total of $book3->pages pages. </h1>"
 
      ?> 
     
