@@ -23,19 +23,29 @@
                 $this->major = $major;
                 $this->gpa = $gpa;
             }
-
-            function hasHonors(){
-                if($this->gpa >= 3.5){
-                    return "true";
-                } 
-                    return "false";
+            
+            function isStem(){
+                if($this->major == "Science" || $this->major == "Technology" || $this->major == "Engineering" || $this->major == "Mathematics"){
+                    return true;
+                }
+                return false;
             }
+            
         }
 
         $student1 = new Student("Jim", "Business", 2.8);
-        $student2 = new Student("Pam", "Art", 3.6);
+        $student2 = new Student("Pam", "Science", 3.6);
 
-        echo $student2->hasHonors();
+        
+        function stemStudent($student){
+         if($student->isStem()){
+            echo "You are a STEM major!";
+            } else {
+            echo "You are not a STEM major.";
+         }
+        }
+
+        stemStudent($student2);
 
      ?> 
     
