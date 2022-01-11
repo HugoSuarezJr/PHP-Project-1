@@ -13,39 +13,29 @@
 
      <?php 
         
-        class Student {
-            var $name;
-            var $major;
-            var $gpa; 
+        class Movie {
+            public $title;
+            private $rating;
 
-            function __construct($name, $major, $gpa){
-                $this->name = $name;
-                $this->major = $major;
-                $this->gpa = $gpa;
+            function __construct($title, $rating){
+                $this ->title = $title;
+                $this->setRating($rating);
             }
-            
-            function isStem(){
-                if($this->major == "Science" || $this->major == "Technology" || $this->major == "Engineering" || $this->major == "Mathematics"){
-                    return true;
+            function getRating(){
+                return $this->rating;
+            }
+            function setRating($rating){
+                if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
+                    $this->rating = $rating;
+                } else {
+                    $this->rating = "NR";
                 }
-                return false;
             }
-            
         }
 
-        $student1 = new Student("Jim", "Business", 2.8);
-        $student2 = new Student("Pam", "Science", 3.6);
+        $avengers = new Movie("Avengers", "DOG");
 
-        
-        function stemStudent($student){
-         if($student->isStem()){
-            echo "You are a STEM major!";
-            } else {
-            echo "You are not a STEM major.";
-         }
-        }
-
-        stemStudent($student2);
+        echo $avengers->getRating();
 
      ?> 
     
