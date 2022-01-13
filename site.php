@@ -27,12 +27,18 @@
 
         class ItalianChef extends Chef{
             function makePasta(){
-                echo "Italian made pasta";
+                echo "Italian made pasta<br>";
             }
             function makeSpecial(){
-                echo "Italian made lasagna";
+                echo "Italian made lasagna<br>";
             }
 
+        }
+
+        class ColombianChef extends ItalianChef{
+            function makeArepa(){
+                echo "Colombian chef made arepas!<br>";
+            }
         }
 
         $chef = new Chef();
@@ -42,6 +48,12 @@
         $italianChef = new ItalianChef();
 
         $italianChef->makeSpecial();
+
+        $colombianChef = new ColombianChef();
+
+        $colombianChef->makeArepa();
+
+        $colombianChef->makeChicken();
 
      ?> 
     
