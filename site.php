@@ -41,6 +41,12 @@
             }
         }
 
+        class GreekChef extends ColombianChef{
+            function makeGiro(){
+                echo "Greek made Giro!";
+            }
+        }
+
         $chef = new Chef();
 
         $chef->makeSpecial();
@@ -54,6 +60,10 @@
         $colombianChef->makeArepa();
 
         $colombianChef->makeChicken();
+
+        $greekChef = new GreekChef();
+
+        $greekChef->makeGiro();
 
      ?> 
     
